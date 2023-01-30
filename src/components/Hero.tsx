@@ -4,7 +4,7 @@ import { Icon } from "./Icon";
 export function Hero() {
   return (
     <div className="mt-12">
-      <div className="max-w-5xl mx-auto">
+      <div className="">
         <img
           className="w-16 h-16 rounded-full"
           src="https://github.com/JoaoRodrigo1996.png"
