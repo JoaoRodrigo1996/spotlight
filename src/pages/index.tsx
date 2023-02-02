@@ -11,12 +11,10 @@ interface Props {
 }
 
 export default function Home({ project }: Props) {
-  console.log(project);
-
   return (
     <div className="bg-[#09090A]">
-      <div className="bg-zinc-900 h-full max-w-[1216px] mx-auto border border-y-0 border-x-zinc-700 p-8">
-        <Header />
+      <Header />
+      <div className="h-full max-w-[1216px] mx-auto  ">
         <Hero />
         <Banner projects={project} />
         <Skills />
@@ -26,9 +24,9 @@ export default function Home({ project }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const project = await client.fetch(`*[_type == "projects"]`);
-
-  console.log(project);
+  const project = await client.fetch(
+    `*[_type == "projects"]{_id, title, description, published_date, image, slug}`
+  );
 
   return {
     props: {

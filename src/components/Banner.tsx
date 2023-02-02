@@ -1,6 +1,5 @@
-import { client } from "@/lib/sanity";
 import { formatDate } from "@/utils/format-date";
-import imageUrlBuilder from "@sanity/image-url";
+import { urlFor } from "@/utils/transform-cdn-url";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,12 +26,6 @@ interface Props {
 }
 
 export function Banner({ projects }: Props) {
-  const builder = imageUrlBuilder(client);
-
-  function urlFor(source: string) {
-    return builder.image(source);
-  }
-
   return (
     <div className=" mt-16 grid grid-cols-4  gap-4 ">
       {projects.map((project) => {

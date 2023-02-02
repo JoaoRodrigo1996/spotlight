@@ -1,40 +1,51 @@
-export function Header() {
+import { useRouter } from "next/router";
+import { FaChevronLeft } from "react-icons/fa";
+
+interface Props {
+  showBackButton?: boolean;
+}
+
+export function Header({ showBackButton }: Props) {
+  const router = useRouter();
+
+  function handleBack() {
+    router.back();
+  }
+
   return (
-    <header>
-      <nav className="flex items-center justify-center py-5 ">
-        <ul className="text-zinc-100 text-sm font-medium bg-zinc-800 flex items-center justify-center gap-2 px-3  rounded-full border border-zinc-700">
-          <a
-            className="px-2 py-2 hover:text-purple-500 transition-all"
-            href="/"
-          >
-            Home
-          </a>
-          <a
-            className="px-2 py-2 hover:text-purple-500 transition-all"
-            href="#"
-          >
-            About
-          </a>
-          <a
-            className="px-2 py-2 hover:text-purple-500 transition-all"
-            href="#"
-          >
-            Projects
-          </a>
-          <a
-            className="px-2 py-2 hover:text-purple-500 transition-all"
-            href="#"
-          >
-            Contact
-          </a>
-          <a
-            className="px-2 py-2 hover:text-purple-500 transition-all"
-            href="#"
-          >
-            Certificates
-          </a>
-        </ul>
-      </nav>
-    </header>
+    <div className=" ">
+      <header className="w-full h-full max-w-[1216px] mx-auto mb-2 py-6 flex items-center justify-between">
+        {showBackButton ? (
+          <button onClick={handleBack}>
+            <FaChevronLeft size={22} color="#E1E1E6" />
+          </button>
+        ) : (
+          <div />
+        )}
+        <nav>
+          <ul className="text-white flex gap-4">
+            <a
+              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
+              href=""
+            >
+              Página inicial
+            </a>
+            <a
+              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
+              href=""
+            >
+              Projetos
+            </a>
+            <a
+              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
+              href=""
+            >
+              Certificados
+            </a>
+          </ul>
+        </nav>
+        <div />
+      </header>
+    </div>
   );
 }
