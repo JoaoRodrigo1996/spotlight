@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaChevronLeft } from "react-icons/fa";
 
@@ -24,24 +25,25 @@ export function Header({ showBackButton }: Props) {
         )}
         <nav>
           <ul className="text-white flex gap-4">
-            <a
-              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
-              href=""
+            <Link
+              className="py-2 px-3 rounded-lg font-semibold border border-transparent text-sm hover:bg-violet-500/10 hover:text-violet-500 transition-all"
+              href="/"
             >
               Página inicial
-            </a>
-            <a
-              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
-              href=""
-            >
-              Projetos
-            </a>
-            <a
-              className="py-2 px-3 rounded-lg font-semibold border border-transparent hover:bg-violet-500/10 hover:text-violet-500 hover:border hover:border-violet-500 transition-all"
-              href=""
+            </Link>
+            <Link
+              className="py-2 px-4 rounded-lg font-semibold border border-transparent text-sm hover:bg-violet-500/10 hover:text-violet-500 transition-all"
+              href="/certificates"
             >
               Certificados
-            </a>
+            </Link>
+            <Link
+              className="py-2 px-3 rounded-lg font-semibold border border-transparent text-sm hover:bg-violet-500/10 hover:text-violet-500 transition-all"
+              href="https://github.com/JoaoRodrigo1996?tab=repositories"
+              target={"_blank"}
+            >
+              Projetos
+            </Link>
           </ul>
         </nav>
         <div />

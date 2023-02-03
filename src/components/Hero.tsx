@@ -11,11 +11,11 @@ export function Hero() {
           alt="Foto de perfil de Rodrigo Mesquita"
         />
         <div className="mt-6">
-          <h1 className="text-5xl text-zinc-100 font-bold leading-normal">
+          <h1 className=" md:text-5xl sm:text-4xl text-zinc-100 font-bold leading-normal">
             Desenvolvedor de software <br />
             fullstack
           </h1>
-          <p className="text-zinc-400 mt-4 leading-loose">
+          <p className="text-zinc-400 sm:text-base mt-4 leading-loose">
             Eu sou Rodrigo, desenvolvedor de software fullstack de Barra Mansa -
             RJ. <br /> Hoje venho me especializando no ecossistema Javascript, e
             em tecnologias

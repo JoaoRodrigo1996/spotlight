@@ -27,12 +27,12 @@ interface Props {
 
 export function Banner({ projects }: Props) {
   return (
-    <div className=" mt-16 grid grid-cols-4  gap-4 ">
+    <div className=" mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 ">
       {projects.map((project) => {
         return (
           <div key={project._id} className="flex flex-col gap-4">
             <Image
-              className="object-contain rounded-3xl w-full"
+              className="object-contain rounded-3xl w-full sm:w-[350px] "
               width={350}
               height={250}
               src={urlFor(project.image.asset._ref).width(300).url()}

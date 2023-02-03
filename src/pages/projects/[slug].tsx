@@ -23,11 +23,10 @@ interface Props {
 }
 
 export default function Projects({ project }: Props) {
-  console.log(project);
   return (
-    <div className="bg-[#09090A]  ">
+    <div className="bg-[#09090A]">
       <Header showBackButton />
-      <div className="max-w-[1216px] h-screen mx-auto">
+      <div className="h-full max-w-[1216px] mx-auto">
         <div className="flex flex-col gap-4 ">
           <Image
             width={1440}
@@ -36,13 +35,13 @@ export default function Projects({ project }: Props) {
             alt={project.image.caption}
           />
           <div className="flex gap-2 px-4 ">
-            <div className="flex-1 ">
+            <div className=" ">
               <h2 className="text-white font-bold text-2xl">{project.title}</h2>
               <p className="text-lg text-zinc-100 mt-3 leading-relaxed">
                 {project.description}
               </p>
             </div>
-            <div className="flex flex-col justify-between gap-3 flex-1">
+            <div className="flex flex-col justify-between gap-3 ">
               <div className=" ">
                 <h2 className="text-lg text-zinc-100 font-semibold ">
                   Tecnologias
@@ -59,7 +58,7 @@ export default function Projects({ project }: Props) {
                     );
                   })}
                 </div>
-                <div className="flex">
+                <div className="flex p-4">
                   <a
                     className="border ml-auto border-violet-500 px-5 py-2 text-white font-semibold uppercase rounded-lg hover:bg-violet-600"
                     href={project.url}
