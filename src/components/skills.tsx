@@ -22,6 +22,7 @@ export function Skills({ skills }: Props) {
       {skills.map((skill) => {
         return (
           <Image
+            key={skill._id}
             className="rounded-lg "
             width={64}
             height={64}

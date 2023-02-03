@@ -1,12 +1,15 @@
+import Image from "next/image";
+import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Icon } from "./Icon";
 
 export function Hero() {
   return (
     <div className="mt-12">
       <div className="">
-        <img
+        <Image
           className="w-16 h-16 rounded-full"
+          width={62}
+          height={62}
           src="https://github.com/JoaoRodrigo1996.png"
           alt="Foto de perfil de Rodrigo Mesquita"
         />
@@ -23,24 +26,18 @@ export function Hero() {
             e tailwind css.
           </p>
           <div className="flex items-center gap-8 mt-8">
-            <Icon
-              href="https://linkedin.com"
-              children={
-                <FaGithub
-                  size={22}
-                  className="text-zinc-400 hover:text-white transition-colors"
-                />
-              }
-            />
-            <Icon
-              href="https://linkedin.com"
-              children={
-                <FaLinkedin
-                  size={22}
-                  className="text-zinc-400 hover:text-white transition-colors"
-                />
-              }
-            />
+            <Link href="https://github.com/JoaoRodrigo1996">
+              <FaGithub
+                size={22}
+                className="text-zinc-400 hover:text-white transition-colors"
+              />
+            </Link>
+            <Link href="https://www.linkedin.com/in/rodrigo-mesquita-1b9279205/">
+              <FaLinkedin
+                size={22}
+                className="text-zinc-400 hover:text-white transition-colors"
+              />
+            </Link>
           </div>
         </div>
       </div>
