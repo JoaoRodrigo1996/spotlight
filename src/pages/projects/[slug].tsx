@@ -46,7 +46,7 @@ export default function Projects({ project }: Props) {
                 <h2 className="text-lg text-zinc-100 font-semibold ">
                   Tecnologias
                 </h2>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 w-96">
                   {project.techs.map((tech) => {
                     return (
                       <span

@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Hero() {
   return (
-    <div className="mt-12">
+    <div className="mt-2 ">
       <div className="">
         <Image
           className="w-16 h-16 rounded-full"
@@ -14,16 +14,16 @@ export function Hero() {
           alt="Foto de perfil de Rodrigo Mesquita"
         />
         <div className="mt-6">
-          <h1 className=" md:text-5xl sm:text-4xl text-zinc-100 font-bold leading-normal">
+          <h1 className=" md:text-5xl sm:text-4xl text-zinc-100 font-bold leading-relaxed">
             Desenvolvedor de software <br />
             fullstack.
           </h1>
-          <p className="text-zinc-400 sm:text-base mt-4 leading-loose">
-            Eu sou Rodrigo, desenvolvedor de software fullstack de Barra Mansa -
-            RJ. <br /> Hoje venho me especializando no ecossistema Javascript, e
-            em tecnologias
-            <br /> como Reactjs Nodejs, React Native, Nextjs, styled components
-            e tailwind css.
+          <p className="text-zinc-400 sm:text-base md:text-lg mt-4 leading-loose">
+            Olá! eu sou Rodrigo Mesquita, sou desenvolvedor de software
+            fullstack junior de Barra Mansa - RJ. <br /> Hoje venho me
+            especializando no ecossistema Javascript, em tecnologias como <br />
+            Reactjs, Nodejs, React Native, Nextjs, styled components, tailwind
+            css e entre outras.
           </p>
           <div className="flex items-center gap-8 mt-8">
             <Link href="https://github.com/JoaoRodrigo1996">
